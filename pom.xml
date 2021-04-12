@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>fr.quentinpigne</groupId>
+  <artifactId>storm-sandbox</artifactId>
+  <version>${revision}${changelist}</version>
+  <packaging>jar</packaging>
+
+  <name>storm-sandbox</name>
+  <description>Sandbox project for Apache Storm framework</description>
+  <url>https://github.com/quentinpigne/storm-sandbox</url>
+
+  <parent>
+    <groupId>fr.quentinpigne</groupId>
+    <artifactId>parent-pom</artifactId>
+    <version>11.0</version>
+  </parent>
+
+  <properties>
+    <revision>1.0.0</revision>
+    <storm.version>2.2.0</storm.version>
+    <junit.version>5.7.1</junit.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.storm</groupId>
+      <artifactId>storm-core</artifactId>
+      <version>${storm.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
