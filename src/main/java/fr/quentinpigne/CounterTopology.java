@@ -13,7 +13,7 @@ public class CounterTopology {
     public static void main(String[] args) throws Exception {
         TopologyBuilder topologyBuilder = new TopologyBuilder();
         topologyBuilder.setSpout("counter-spout", new CounterSpout());
-        topologyBuilder.setBolt("printer-bolt", new PrinterBolt());
+        topologyBuilder.setBolt("printer-bolt", new PrinterBolt()).shuffleGrouping("counter-spout");
 
         String topologyName = "counter-topology";
         Config config = new Config();
